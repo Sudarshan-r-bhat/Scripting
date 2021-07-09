@@ -1,0 +1,49 @@
+Timeline of creation:
+
+1 cmd_args_and_print.sh
+2 control_stmts.sh
+3 read_username_pass.sh
+4 for_loop.sh
+5 while_loops.sh
+6 
+
+
+
+
+
+
+
+
+
+::::::::::::::::::::::::::::::::::::::::::::::::    Notes   ::::::::::::::::::::::::::::::::::::::::::::::::::::::
+References:
+
+    . for flags and opertors:
+        https://kapeli.com/cheat_sheets/Bash_Test_Operators.docset/Contents/Resources/Documents/index
+
+    . for bash learning:
+        https://www.tutorialkart.com/bash-shell-scripting
+
+. bash supports number, character, string.
+. single line comment use #
+. multi line comment use <<com  ...... com
+. any expression to be evaluated is put inside ($a + $b) or `expr $a + $b`  or let c = $a + $b
+. use $<var> only while accessing a variable 
+. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
