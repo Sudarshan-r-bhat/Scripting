@@ -5,15 +5,15 @@ Timeline of creation:
 3 read_username_pass.sh
 4 for_loop.sh
 5 while_loops.sh
-6 
-
-
-
-
-
-
-
-
+6 operators.sh
+7 stringOperations.sh
+8 functions.sh
+9 array_operations.sh
+10 file_operations.sh
+11
+12
+13
+14
 
 ::::::::::::::::::::::::::::::::::::::::::::::::    Notes   ::::::::::::::::::::::::::::::::::::::::::::::::::::::
 References:
@@ -29,7 +29,29 @@ References:
 . multi line comment use <<com  ...... com
 . any expression to be evaluated is put inside ($a + $b) or `expr $a + $b`  or let c = $a + $b
 . use $<var> only while accessing a variable 
-. 
+. double quotes around the expression is necessary if there are white spaces in-between.
+    ex: 
+    > s="hello world"   
+    > echo the length of the string is = "${#s}"
+    refer:
+        https://stackoverflow.com/questions/6697753/difference-between-single-and-double-quotes-in-bash#:~:text=6%20Answers&text=Single%20quotes%20won't%20interpolate,%2C%20certain%20%5C%20escapes%2C%20etc.&text=Enclosing%20characters%20in%20single%20quotes,each%20character%20within%20the%20quotes.
+
+. string split :
+
+    # parameter%%word : removes the longest matching suffix pattern.
+    # 'parameter#delimiter' : removes the shortest matching prefix pattern.
+    echo ${s#*"$delimiter"}, ${s%%"$delimiter"*}
+
+. Regex in Bash scripting is important.
+
+. String concetanation syntax:
+    $var1$var2
+
+. String substring syntax:
+    ${string:<startIndex>:<length>}
+. This is how you call a command or a function inside a string: "$(<command/function> <args>)"
+
+
 
 
 
