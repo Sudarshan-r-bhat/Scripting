@@ -12,6 +12,7 @@
 - stringOperations_.sh
 - functions_.sh
 - array_operations.sh
+- file_operations.sh
 
 ## python scripting
 

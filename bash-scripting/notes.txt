@@ -51,6 +51,9 @@ References:
     ${string:<startIndex>:<length>}
 . This is how you call a command or a function inside a string: "$(<command/function> <args>)"
 
+Array:
+    . retrieving a Sub-Array is slightly different from substring retrieval.
+    . ex: ${arr[@]:<startIndex>:<endIndex>}
 
 
 
