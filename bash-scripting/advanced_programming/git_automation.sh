@@ -5,12 +5,12 @@ echo "********git operation started*******************"
 echo "************************************************"
 
 << com
-	available variable are
-	1. FOLDERS
-	2. OP (OPERATION)
-	3. INDEX
-	4. GIT_PATH
-	5. c_mssg (COMMIT MSSG)
+  available variable are
+  1. FOLDERS
+  2. OP (OPERATION)
+  3. INDEX
+  4. GIT_PATH
+  5. c_mssg (COMMIT MSSG)
 com
 
 function git_operation() {
@@ -21,7 +21,7 @@ function git_operation() {
 # read operations
 
   read -p "Enter folder index to select GIT_PATH: " INDEX;
-  GIT_PATH="./${FOLDERS[$INDEX]}";
+  GIT_PATH="./${FOLDERS[$INDEX - 1]}";
   echo "GIT_PATH selected = $GIT_PATH ";
 
   read -p "Operation 1:pull, 2:status, 3.logs, 4:ADD,COMMIT, PUSH (1, 2, 3, 4) ?: " OP;
@@ -62,7 +62,7 @@ function git_operation() {
    
     echo "**************************************"
    
-    git -C "$GIT_PATH" commit -m "$c_mssg"
+    git -C "$GIT_PATH" commit -m "$(date +%d-%m-%Y__%H:%M) $c_mssg"
    
     echo "**************************************"
 
@@ -82,5 +82,7 @@ function git_operation() {
   fi;
   echo "************git operations completed**************************"
 }
-
+# calling the function / command.
 git_operation
+
+

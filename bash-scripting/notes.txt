@@ -10,7 +10,9 @@ Timeline of creation:
 8 functions.sh
 9 array_operations.sh
 10 file_operations.sh
-11
+
+Advanced_programming:
+11 git_automation.sh
 12
 13
 14
