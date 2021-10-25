@@ -1,0 +1,19 @@
+#!/bin/bash
+echo ::::::::::::::::::::::::::::::::::::::::::::::::::
+echo "starting the kafka instances..."
+echo ::::::::::::::::::::::::::::::::::::::::::::::::::
+
+echo '[log] starting the zookeeper @localhost:2181 config @$KAFKA_HOME/config/zookeeper.properties';
+gnome-terminal -e "bash -c \"zookeeper-server-start.sh $KAFKA_HOME/config/zookeeper.properties;exec bash\"";
+echo  '[log] zookeeper started'
+
+sleep 5s
+
+echo '[log] starting kafka @localhost:9092 singleinstance/broker/bootstrap server'
+gnome-terminal -e "bash -c \"kafka-server-start.sh $KAFKA_HOME/config/server.properties; exec bash \"";
+echo '[log] kafka started'
+
+
+echo ::::::::::::::::::::::::::::::::::::::::::::::::::
+echo "ENDING THE SCRIPT HERE. BYE."
+echo ::::::::::::::::::::::::::::::::::::::::::::::::::

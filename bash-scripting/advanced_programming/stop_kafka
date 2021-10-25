@@ -1,0 +1,13 @@
+#!/bin/bash
+echo ::::::::::::::::::::::::::::::::::::::::::::
+echo "        kafka server stop script      "
+echo ::::::::::::::::::::::::::::::::::::::::::::
+
+echo stopping kafka and zookeeper
+kafka-server-stop.sh
+sleep 2s
+zookeeper-server-stop.sh
+
+echo ::::::::::::::::::::::::::::::::::::::::::::
+echo "        SUCCESS !  BYE.      "
+echo ::::::::::::::::::::::::::::::::::::::::::::
